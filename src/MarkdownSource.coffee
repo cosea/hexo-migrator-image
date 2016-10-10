@@ -78,7 +78,7 @@ module.exports = class Source
       if img.skipped
         continue
       r = new RegExp escapeRegExp img.url, "g"
-      newSrc = newSrc.replace r, "/images/#{img.localPath}"
+      newSrc = newSrc.replace r, url_for("/images/#{img.localPath}")
       #console.log "#{img.url} -> #{img.localPath}"
     d = new Date()
     timestamp = d.toISOString()
