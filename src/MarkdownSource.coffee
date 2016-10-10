@@ -2,7 +2,7 @@
 file = require 'hexo-fs'
 # sourceDir = hexo.source_dir
 
-Image = require './MarkdownImage'
+Image = require 'MarkdownImage'
 async = require 'async'
 
 MatchImageUrl = (url) ->

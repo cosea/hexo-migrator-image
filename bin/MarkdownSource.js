@@ -3,7 +3,7 @@ var Image, MatchImageMarkDown, MatchImageUrl, Source, async, escapeRegExp, file,
 
 file = require('hexo-fs');
 
-Image = require('./MarkdownImage');
+Image = require('MarkdownImage');
 
 async = require('async');
 
@@ -95,7 +95,7 @@ module.exports = Source = (function() {
         continue;
       }
       r = new RegExp(escapeRegExp(img.url, "g"));
-      newSrc = newSrc.replace(r, "/images/" + img.localPath);
+      newSrc = newSrc.replace(r, url_for("/images/" + img.localPath));
     }
     d = new Date();
     timestamp = d.toISOString().replace(/:/g, "-");
